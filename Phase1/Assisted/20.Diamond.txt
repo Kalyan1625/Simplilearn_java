@@ -1,0 +1,49 @@
+package com.project.kalyan;
+
+public interface First {
+	
+	
+	
+		default void show() {
+			
+			System.out.println("Default show from First");
+			
+		}
+
+}
+
+
+public interface Second {
+	
+	
+	default void show() {
+		
+			System.out.println("Default show from Second");
+		
+	}
+
+}
+
+
+public class TestImp implements First , Second{
+	
+		
+	
+		public void show() {
+			
+			First.super.show();
+			Second.super.show();
+			
+		}
+	
+	
+		public static void main(String[] args) {
+			
+				TestImp test = new TestImp();
+				
+				test.show();
+			
+		}
+	
+
+}
